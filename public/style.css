@@ -16,7 +16,7 @@ footer {
 
 main {
   padding: 3vmin;
-  /* flex: 1 0 auto; */
+  flex: 1 0 auto;
 }
 
 .banner-title {
@@ -70,6 +70,10 @@ p {
   color: grey;
 }
 
+.post-placehodler {
+    height: 96px;
+}
+
 .profile {
   height: 200px;
   width: 200px;
@@ -81,13 +85,13 @@ form {
 }
 
 .feedback-input {
-  color: white;
+  color: black;
   font-weight: 500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border: 2px solid #2A41EB;
+  border: 2px solid #006BFF;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
@@ -97,18 +101,18 @@ form {
 }
 
 .feedback-input:focus {
-  border: 2px solid #2A41EB;
+  border: 2px solid #006BFF;
 }
 
 textarea {
-  height: 150px;
+  height: 300px;
   line-height: 150%;
   resize: vertical;
 }
 
 [type="submit"] {
   width: 100%;
-  background: #2A41EB;
+  background: #006BFF;
   border-radius: 5px;
   border: 0;
   cursor: pointer;
@@ -121,5 +125,5 @@ textarea {
   font-weight: 700;
 }
 [type="submit"]:hover {
-  background: #2A41EB;
+  background: #006BFF;
 }
