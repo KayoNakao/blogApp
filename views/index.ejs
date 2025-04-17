@@ -7,7 +7,7 @@
         <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
       </div>
       <div class="col-lg-4 px-0 banner-image">
-        <img src="assets/top-flower.png" alt="flower image">
+        <img src="/assets/top-flower.png" alt="flower image">
       </div>
     </div>
 
@@ -17,7 +17,7 @@
             <div class="position-sticky" style="top: 2rem;">
               <div class="p-4 mb-3 author rounded">
                 <h4 class="fst-italic">About the Author</h4>
-                <img src="assets/profile.PNG" alt="profile image" class="about">
+                <img src="/assets/profile.PNG" alt="profile image" class="about">
                 <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
               </div>
       
@@ -26,12 +26,12 @@
                 <ul class="list-unstyled">
                   <li>
                     <% if (locals.posts) { %>
-                        <% posts.forEach(post => { %>
-                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                            <img class="bd-placeholder-img post-placehodler" src="assets/top-flower.png" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"></rect></img>
+                        <% posts.forEach((post, index) => { %>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="/post/<%= index %>">
+                            <img class="bd-placeholder-img post-placehodler" src="/assets/top-flower.png" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"></rect></img>
                             <div class="col-lg-8">
                               <h6 class="mb-0"><%= post.title %></h6>
-                              <small class="text-body-secondary">January 15, 2024</small>
+                              <small class="text-body-secondary"><%= post.date %></small>
                             </div>
                           </a>
                         <%  }); %>                     
@@ -71,7 +71,7 @@
         <article class="blog-post">
             <% if (locals.title) { %>
                 <h2 class="display-5 link-body-emphasis mb-1"><%= title %></h2>
-                <p class="blog-post-meta"> <%= new Date() %></p>
+                <p class="blog-post-meta"> <%= date %></p>
                 <p><%= content %></p>
             <% } else { %>
                 <h2>No post yet</h2>
@@ -81,14 +81,7 @@
           
           
         </article>
-  
         
-  
-        <nav class="blog-pagination mt-5" aria-label="Pagination">
-          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
-        </nav>
-  
       </div>
       
     </div>
