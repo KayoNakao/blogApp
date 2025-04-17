@@ -1,0 +1,19 @@
+# Node dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# dotenv files (for environment variables)
+.env
+.env.*.local
+
+# Cache / output
+.cache/
+dist/
+coverage/
+
+# IDE/editor stuff
+.vscode/
