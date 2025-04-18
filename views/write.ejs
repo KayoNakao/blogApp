@@ -1,10 +1,15 @@
 <%- include("partials/header.ejs") %>
 
 <h1>Write an Article</h1>
-<form action="/submit" method="post">
-  <input name="title" type="text" class="feedback-input" placeholder="Title" />
-  <textarea name="text" class="feedback-input" placeholder="Content"></textarea>
-  <input type="submit" value="SUBMIT" />
+<form action="/submit" method="post" class="submit-form">
+  <input name="title" type="text" class="feedback-input" placeholder="Title" <% if (locals.title) { %> value= <%= title %> <% } %>/>
+  <textarea name="text" class="feedback-input" placeholder="Content"><% if (locals.content) { %> <%= content %><% } %></textarea>
+  <% if (locals.title) { %>
+    <button type="submit" name="action" value="edit" class="submit">EDIT</button>
+  <% } else { %>
+    <button type="submit" name="action" value="submit" class="submit">SUBMIT</button>
+  <% } %>
+  
 </form>
 
 <%- include("partials/footer.ejs") %>

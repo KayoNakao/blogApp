@@ -70,17 +70,15 @@ p {
   color: grey;
 }
 
+.content {
+  color: black;
+}
+
 .post-placehodler {
     height: 96px;
 }
 
-.profile {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-form {
+.submit-form {
   margin-top: 50px;
 }
 
@@ -110,7 +108,7 @@ textarea {
   resize: vertical;
 }
 
-[type="submit"] {
+.submit {
   width: 100%;
   background: #006BFF;
   border-radius: 5px;
@@ -124,6 +122,7 @@ textarea {
   margin-top: -4px;
   font-weight: 700;
 }
-[type="submit"]:hover {
+
+.submit:hover {
   background: #006BFF;
 }
